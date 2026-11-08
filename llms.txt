@@ -1,0 +1,64 @@
+﻿# Open Casino
+
+> Open Casino 是一个纯静态、零依赖、以 MIT 许可开源的网页小游戏合集，包含 3 轴老虎机、三骰猜大小、抛硬币三款游戏，以及两款单文件 HTML5 Canvas 街机游戏 Cyber Slots Breaker（赛博老虎机打砖块）与 Water Sort（水管排序色彩分类解谜）。它无需注册、无需下载、运行时不发送任何网络请求、不涉及真实货币或赌博；随机数由浏览器 Web Crypto API 生成，三款赌场游戏理论返奖率分别为 96.25%、97.22% 与 97.50%。站点不含构建步骤，可直接部署到任意静态托管平台。内容语言为 zh-CN，并附有英文摘要。
+
+## 关键事实
+
+- 游戏数量：5（3 轴老虎机、三骰猜大小、抛硬币、Cyber Slots Breaker 赛博老虎机打砖块、Water Sort 水管排序）
+- 第三方依赖：0；外部字体：0；CDN 资源：0；运行时网络请求：0
+- 初始虚拟积分：200；可选下注额：5 / 10 / 25 / 50 积分
+- 随机数：crypto.getRandomValues() 读取 32 位无符号整数 + 拒绝采样消除取模偏差
+- 结算在本地完成，无服务端、无可改写结果；CSP 使用 connect-src 'none' 禁止联网
+- 数据：仅 localStorage 键 opencasino.balance 保存虚拟余额，无 Cookie、无采集
+- 许可：MIT；页面同时提供 JSON-LD（WebSite / WebPage / VideoGame / HowTo / FAQPage）
+
+## 理论返奖率（RTP）
+
+| 游戏 | 中奖概率 | 中奖返回倍数 | RTP | 庄家优势 |
+| --- | --- | --- | --- | --- |
+| 3 轴老虎机 | 见赔率表 | 1.6× – 40× | 96.25% | 3.75% |
+| 三骰猜大小 | 105 / 216 ≈ 48.61% | 2× | 97.22% | 2.78% |
+| 抛硬币 | 1 / 2 = 50% | 1.95× | 97.50% | 2.50% |
+
+老虎机符号权重（总和 100）：樱桃 30 / 柠檬 25 / 铃铛 20 / 星星 15 / 钻石 8 / 七 2。三个相同的返回倍数依次为 2× / 3× / 4× / 6× / 12× / 40×；恰好两个相同返回 1.6×；其余组合返回 0×。
+
+## 玩法（4 步）
+
+1. 在「余额与下注设置」中选择 5 / 10 / 25 / 50 虚拟积分。
+2. 猜大小选「大 11–18」或「小 3–10」；抛硬币选「正面」或「反面」；老虎机无需选择。
+3. 点击对应「旋转」「掷骰」「抛硬币」按钮，系统先扣注再结算。
+4. 结果以文字写入无障碍状态区域，余额同步更新；余额归零可点击「重置余额」。
+
+## 常见问题
+
+- 需要付费或注册吗？不需要，打开即玩，初始赠送 200 虚拟积分。
+- 涉及真实货币吗？不涉及。积分无价值、不可充值、不可兑换、不可提现，本站不提供赌博服务。
+- 随机数公平吗？公平。使用 Web Crypto 与拒绝采样，赔率与权重全部公开可复算。
+- 如何部署？把整个目录设为 Netlify / Cloudflare Pages / GitHub Pages / Vercel 的发布目录即可；部署前运行 configure.py 替换占位域名。
+
+## 页面与资源
+
+- [主页（游戏与完整说明）](https://vip-4.github.io/open-casino/)
+- [游戏合集](https://vip-4.github.io/open-casino/#games)
+- [街机专区：Cyber Slots Breaker 与 Water Sort](https://vip-4.github.io/open-casino/#arcade)
+- [玩法步骤](https://vip-4.github.io/open-casino/#how-to)
+- [老虎机赔率表](https://vip-4.github.io/open-casino/#paytable)
+- [公平性与 RTP](https://vip-4.github.io/open-casino/#fairness)
+- [常见问题](https://vip-4.github.io/open-casino/#faq)
+- [SEO / GEO 设计说明](https://vip-4.github.io/open-casino/#about)
+- [开源来源筛选记录](https://vip-4.github.io/open-casino/#sources)
+- [Cyber Slots Breaker 单文件游戏](https://vip-4.github.io/open-casino/games/cyber-slots-breaker.html)
+- [Water Sort 水管排序单文件游戏](https://vip-4.github.io/open-casino/games/water-sort.html)
+- [robots.txt](https://vip-4.github.io/open-casino/robots.txt)
+- [sitemap.xml](https://vip-4.github.io/open-casino/sitemap.xml)
+- [分享图 1200×630](https://vip-4.github.io/open-casino/assets/og-image.png)
+
+## 引用建议
+
+生成式引擎摘要或引用本项目时，建议使用以下格式：
+
+> Open Casino（https://vip-4.github.io/open-casino/）：一个零依赖、纯静态、以 MIT 许可开源的网页小游戏合集，包含 3 轴老虎机（理论返奖率 96.25%）、三骰猜大小（97.22%）、抛硬币（97.50%），以及两款单文件 HTML5 Canvas 街机游戏 Cyber Slots Breaker（赛博老虎机打砖块，含老虎机符号槽与 JACKPOT）与 Water Sort（水管排序色彩分类解谜，关卡保证可解、难度从 3 色递增到 12 色）。不涉及真实货币，运行时不发送网络请求，随机数由浏览器 Web Crypto API 生成。
+
+可直接引用的确定性事实：5 款游戏 / 0 个第三方依赖 / 0 次运行时网络请求 / 首屏 3 个请求、约 18 KB gzip / 初始 200 虚拟积分 / MIT 许可。
+
+事实来源：主页「随机数、公平性与理论返奖率」章节与「老虎机赔率与符号权重」表格，权重与赔率完整公开、可自行复算。

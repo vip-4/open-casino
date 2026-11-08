@@ -1,0 +1,14 @@
+# Netlify / Cloudflare Pages 响应头
+# 内联 JSON-LD 的 CSP 哈希由 configure.py 依据 index.html 自动计算并写入，请勿手工改动。
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), browsing-topics=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' 'unsafe-hashes'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; manifest-src 'self'; frame-ancestors 'none'
+  Cache-Control: public, max-age=3600
+
+/assets/*
+  Cache-Control: public, max-age=604800

@@ -1,0 +1,20 @@
+# Open Casino — Netlify 配置
+# 无需构建命令：本目录即发布目录
+# 安全头与缓存头统一由同目录的 _headers 提供，避免重复声明
+
+[build]
+  publish = "."
+  command = ""
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/play"
+  to = "/#games"
+  status = 301

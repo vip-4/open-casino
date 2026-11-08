@@ -1,0 +1,24 @@
+﻿/* TEAM */
+  Project: Open Casino
+  Site: https://vip-4.github.io/open-casino/
+  Description: 轻量、零依赖、静态托管的开源网页小游戏合集（含单文件 Canvas 街机游戏 Cyber Slots Breaker 与 Water Sort 水管排序）
+  License: MIT
+  Language: zh-CN
+  Last update: 2026-11-08
+
+/* THANKS */
+  GitHub Topics open-source-games: https://github.com/topics/open-source-games
+  itch.io open-source tag: https://itch.io/games/tag-open-source
+  GitHub Trending: https://github.com/trending?since=daily
+  Ludum Dare: https://ldjam.com/
+  LudumDare repositories: https://github.com/orgs/LudumDare/repositories
+  Simple Game Tutorials: https://simplegametutorials.github.io/
+  itch.io API docs: https://itch.io/docs/api/
+
+/* SITE */
+  Standards: HTML5, CSS3, ES5-compatible JavaScript, schema.org JSON-LD
+  Components: Vanilla JS, Web Crypto API, localStorage
+  Software: no build step, no framework, no CDN
+  SEO: semantic landmarks, meta tags, Open Graph, Twitter Card, JSON-LD, sitemap.xml
+  GEO: answer-first lead, citable facts, FAQ pairs, llms.txt, script-free readable content
+  Accessibility: WCAG-oriented keyboard support, ARIA live regions, skip link, reduced motion

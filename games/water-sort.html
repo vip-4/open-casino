@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Water Sort 水管排序 — 霓虹色彩分类解谜（免费在线玩）| Open Casino</title>
+<meta name="description" content="Water Sort 水管排序是一款零依赖、可离线运行的单文件 HTML5 Canvas 解谜游戏。点击或拖动管子，把同色液体倒在一起，让每根管子最终只含一种颜色即可通关。支持键盘、鼠标与触屏，无障碍友好，无任何外部资源。">
+<meta name="keywords" content="水管排序,Water Sort,色彩分类,液体排序,解谜游戏,HTML5游戏,Canvas游戏,单文件游戏,原生JavaScript,触屏游戏,开源游戏,Open Casino">
+<meta name="author" content="Open Casino">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="bingbot" content="index, follow">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#05060f">
+<meta name="application-name" content="Water Sort 水管排序">
+<meta name="apple-mobile-web-app-title" content="Water Sort 水管排序">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="canonical" href="https://vip-4.github.io/open-casino/games/water-sort.html">
+<link rel="alternate" hreflang="zh-CN" href="https://vip-4.github.io/open-casino/games/water-sort.html">
+<link rel="alternate" hreflang="x-default" href="https://vip-4.github.io/open-casino/games/water-sort.html">
+<link rel="alternate" type="text/plain" href="../llms.txt" title="LLM 友好的站点摘要">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Open Casino">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Water Sort 水管排序 — 霓虹色彩分类解谜（免费在线玩）">
+<meta property="og:description" content="零依赖单文件 Canvas 解谜：把同色液体倒在一起，让每根管子只含一种颜色即可通关。支持键盘、鼠标与触屏，可离线运行。">
+<meta property="og:url" content="https://vip-4.github.io/open-casino/games/water-sort.html">
+<meta property="og:image" content="https://vip-4.github.io/open-casino/assets/og-image.png">
+<meta property="og:image:secure_url" content="https://vip-4.github.io/open-casino/assets/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Water Sort 水管排序霓虹解谜游戏画面，多根彩色液体管与发光分类效果">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Water Sort 水管排序 — 霓虹色彩分类解谜（免费在线玩）">
+<meta name="twitter:description" content="零依赖单文件 Canvas 解谜：把同色液体倒在一起，让每根管子只含一种颜色即可通关。">
+<meta name="twitter:image" content="https://vip-4.github.io/open-casino/assets/og-image.png">
+<meta name="twitter:image:alt" content="Water Sort 水管排序霓虹解谜游戏画面">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070b18'/%3E%3Crect x='22' y='14' width='8' height='36' rx='4' fill='%2322e6ff'/%3E%3Crect x='34' y='14' width='8' height='36' rx='4' fill='%23ff2e88'/%3E%3Crect x='22' y='34' width='8' height='16' rx='0' fill='%236dff5b'/%3E%3C/svg%3E">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' 'unsafe-hashes'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; manifest-src 'self'; frame-ancestors 'none'">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["VideoGame", "SoftwareApplication"],
+      "@id": "https://vip-4.github.io/open-casino/games/water-sort.html#game",
+      "name": "Water Sort 水管排序",
+      "alternateName": "霓虹水管排序解谜",
+      "url": "https://vip-4.github.io/open-casino/games/water-sort.html",
+      "description": "一款零依赖、可离线运行的单文件 HTML5 Canvas 色彩分类解谜游戏：点击或拖动管子，把同色液体倒在一起，让每根管子最终只含一种颜色即可通关。",
+      "genre": ["Puzzle", "Casual", "Logic"],
+      "gamePlatform": "Web browser",
+      "applicationCategory": "GameApplication",
+      "applicationSubCategory": "Puzzle / Casual",
+      "operatingSystem": "Any",
+      "inLanguage": "zh-CN",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "publisher": { "@type": "Organization", "name": "Open Casino", "url": "https://vip-4.github.io/open-casino" },
+      "featureList": [
+        "纯 Canvas 渲染，无任何图片或外部资源",
+        "基于经典「水管排序」规则的关卡生成器，保证每关可解",
+        "关卡难度随等级提升：颜色数量逐步增加，最少 3 色、最多 12 色",
+        "撤销、重开、下一关与实时步数 / 得分统计",
+        "键盘、鼠标与触屏输入，支持无障碍与 reduced-motion"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://vip-4.github.io/open-casino/games/water-sort.html#webpage",
+      "url": "https://vip-4.github.io/open-casino/games/water-sort.html",
+      "name": "Water Sort 水管排序 — 霓虹色彩分类解谜",
+      "description": "可离线运行的单文件 HTML5 Canvas 色彩分类解谜游戏，支持键盘、鼠标与触屏。",
+      "isPartOf": { "@id": "https://vip-4.github.io/open-casino/#website" },
+      "primaryImageOfPage": { "@type": "ImageObject", "url": "https://vip-4.github.io/open-casino/assets/og-image.png", "width": 1200, "height": 630 },
+      "datePublished": "2026-11-08",
+      "dateModified": "2026-11-08",
+      "inLanguage": "zh-CN",
+      "breadcrumb": { "@id": "https://vip-4.github.io/open-casino/games/water-sort.html#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://vip-4.github.io/open-casino/games/water-sort.html#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Open Casino", "item": "https://vip-4.github.io/open-casino/" },
+        { "@type": "ListItem", "position": 2, "name": "Water Sort 水管排序", "item": "https://vip-4.github.io/open-casino/games/water-sort.html" }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "如何游玩 Water Sort 水管排序",
+      "description": "四个步骤即可开始：选择管子、倒入另一根、完成单色分类、进入下一关。全程无需注册或联网。",
+      "totalTime": "PT1M",
+      "step": [
+        { "@type": "HowToStep", "position": 1, "name": "选择管子", "text": "点击、轻触或用键盘方向键聚焦一根装有液体的管子，作为倒出的来源。", "url": "https://vip-4.github.io/open-casino/games/water-sort.html" },
+        { "@type": "HowToStep", "position": 2, "name": "倒入另一根", "text": "再点击或聚焦另一根管子：只有当目标管为空，或其顶部颜色与来源顶部颜色相同时才能倒入，且只会倒入相连的同色液体。", "url": "https://vip-4.github.io/open-casino/games/water-sort.html" },
+        { "@type": "HowToStep", "position": 3, "name": "完成单色分类", "text": "通过不断倒转，让每一根管子要么为空，要么被同一种颜色的液体填满，即视为该关通过。", "url": "https://vip-4.github.io/open-casino/games/water-sort.html" },
+        { "@type": "HowToStep", "position": 4, "name": "进入下一关", "text": "通关后点击「下一关」，颜色数量提升、管子增多，难度循序渐进；可随时撤销或重开本关。", "url": "https://vip-4.github.io/open-casino/games/water-sort.html" }
+      ]
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Water Sort 水管排序怎么玩？","acceptedAnswer":{"@type":"Answer","text":"点击一根装有液体的管子选中它，再点击另一根管子即可把顶部相连的同色液体倒过去。目标是让每根管子最终只含一种颜色（或为空）。"}},{"@type":"Question","name":"这款游戏需要联网吗？","acceptedAnswer":{"@type":"Answer","text":"不需要。页面不加载任何外部库、字体或图片，游戏逻辑与音效全部由原生 JavaScript 与 Web Audio 在本地生成，可离线运行。"}},{"@type":"Question","name":"Water Sort 的每一关都保证可解吗？","acceptedAnswer":{"@type":"Answer","text":"是的。关卡由「先按颜色填满、再打乱所有液体段」的标准生成方式产生，因此每一关都有解；难度通过增加颜色数量循序渐进。"}}]}
+</script>
+<style>
+:root{
+  --bg:#05060f;
+  --panel:#0b0f1f;
+  --cyan:#22e6ff;
+  --lime:#9dff5b;
+  --pink:#ff2e88;
+  --violet:#9d8cff;
+  --text:#e8f4ff;
+  --muted:#8aa2c0;
+  --font:"Segoe UI","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --mono:"Cascadia Mono","Consolas","SFMono-Regular",monospace;
+}
+*{box-sizing:border-box}
+html,body{min-height:100%}
+body{
+  margin:0;min-height:100vh;min-height:100svh;
+  display:flex;align-items:center;justify-content:center;
+  padding:clamp(10px,2.4vw,28px);
+  color:var(--text);font-family:var(--font);
+  background:
+    radial-gradient(1100px 700px at 50% -10%,rgba(34,230,255,.12),transparent 60%),
+    radial-gradient(900px 620px at 88% 108%,rgba(157,140,255,.12),transparent 60%),
+    var(--bg);
+  overflow-x:hidden;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(80,160,255,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(80,160,255,.05) 1px,transparent 1px);
+  background-size:46px 46px;
+  -webkit-mask-image:radial-gradient(circle at 50% 40%,#000,transparent 80%);
+          mask-image:radial-gradient(circle at 50% 40%,#000,transparent 80%);
+}
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--cyan);color:#03121a;padding:8px 14px;border-radius:8px;z-index:50}
+.skip-link:focus{left:12px;top:12px}
+.noscript-note{margin:0 auto;max-width:760px;text-align:center;padding:14px 16px;background:rgba(255,46,136,.12);border:1px solid rgba(255,46,136,.4);border-radius:12px;color:#ffd6e7;font-size:14px}
+.shell{position:relative;z-index:1;width:min(1060px,100%)}
+.crumb{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 12px;font-size:12.5px;letter-spacing:.04em;color:var(--muted)}
+.crumb a{color:var(--cyan);text-decoration:none}
+.crumb a:hover{text-decoration:underline;text-shadow:0 0 12px rgba(34,230,255,.5)}
+.crumb span[aria-current]{color:#cfe4f8}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.04em}
+.brand .mark{font-size:1.5rem;filter:drop-shadow(0 0 10px rgba(34,230,255,.5))}
+.brand small{display:block;color:var(--muted);font-weight:500;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase}
+.cabinet{
+  background:linear-gradient(160deg,rgba(20,26,48,.92),rgba(9,12,26,.92));
+  border:1px solid rgba(34,230,255,.18);
+  border-radius:18px;padding:clamp(12px,2vw,20px);
+  box-shadow:0 0 40px rgba(34,230,255,.08),0 18px 50px rgba(0,0,0,.45);
+}
+.screen{position:relative;width:100%;aspect-ratio:16/10;border-radius:12px;overflow:hidden;background:radial-gradient(120% 120% at 50% 0%,#0a1024,#060812);border:1px solid rgba(157,140,255,.18)}
+#canvas{display:block;width:100%;height:100%;touch-action:manipulation}
+.scanlines{position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,0) 0 2px,rgba(0,0,0,.10) 2px 3px);mix-blend-mode:multiply;opacity:.5}
+.toast{position:absolute;left:50%;top:14px;transform:translateX(-50%);background:rgba(8,12,24,.86);border:1px solid rgba(34,230,255,.4);color:#dff6ff;padding:8px 16px;border-radius:999px;font-size:13px;letter-spacing:.03em;opacity:0;transition:opacity .25s;pointer-events:none}
+.toast.show{opacity:1}
+.overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:18px;background:rgba(4,6,15,.72);backdrop-filter:blur(3px)}
+.overlay[hidden]{display:none}
+.panel{max-width:560px;width:100%;text-align:center;background:linear-gradient(160deg,rgba(18,24,46,.96),rgba(8,11,22,.96));border:1px solid rgba(34,230,255,.3);border-radius:16px;padding:26px 22px;box-shadow:0 0 40px rgba(34,230,255,.18)}
+.eyebrow{margin:0 0 6px;color:var(--cyan);font-size:12px;letter-spacing:.32em;text-transform:uppercase}
+.panel h2{margin:0 0 10px;font-size:clamp(20px,3.4vw,28px);letter-spacing:.02em}
+.panel .lead{margin:0 0 18px;color:#bcd3ec;font-size:14px;line-height:1.7}
+.hud{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:14px}
+.stat{display:flex;flex-direction:column;line-height:1.1}
+.stat b{font-size:1.45rem;color:var(--cyan);font-family:var(--mono)}
+.stat span{font-size:.72rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
+.hud .spacer{flex:1 1 auto}
+.btn{appearance:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 18px;border-radius:11px;font-family:var(--font);font-size:14px;font-weight:800;letter-spacing:.05em;border:1px solid transparent;transition:transform .15s,box-shadow .2s,filter .2s}
+.btn:active{transform:translateY(1px) scale(.99)}
+.btn.primary{color:#03121a;background:linear-gradient(120deg,var(--cyan),#7df3ff 45%,var(--lime));box-shadow:0 0 22px rgba(34,230,255,.34),0 8px 18px rgba(0,0,0,.35)}
+.btn.primary:hover{filter:brightness(1.08);box-shadow:0 0 30px rgba(34,230,255,.5)}
+.btn.ghost{color:var(--text);background:rgba(255,255,255,.05);border-color:rgba(148,180,220,.3)}
+.btn.ghost:hover{background:rgba(255,255,255,.1)}
+.btn:focus-visible{outline:3px solid var(--lime);outline-offset:2px}
+.info{margin-top:22px;background:linear-gradient(160deg,rgba(20,26,48,.7),rgba(9,12,26,.7));border:1px solid rgba(157,140,255,.18);border-radius:16px;padding:clamp(16px,2.4vw,26px)}
+.info h2{margin:0 0 12px;font-size:clamp(17px,2.2vw,21px);letter-spacing:.04em;color:#d9ecff}
+.info-lead{margin:0 0 18px;color:#bcd3ec;font-size:13.5px;line-height:1.85}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}
+.cards article{padding:14px;border-radius:12px;border:1px solid rgba(34,230,255,.14);background:rgba(255,255,255,.03)}
+.cards h3{margin:0 0 6px;font-size:15px;color:#e6f3ff}
+.cards p{margin:0;color:var(--muted);font-size:12.5px;line-height:1.6}
+.faq{margin-top:18px;display:grid;gap:10px}
+.faq article{padding:12px 14px;border-radius:12px;border:1px solid rgba(148,180,220,.16);background:rgba(255,255,255,.03)}
+.faq h3{margin:0 0 6px;font-size:14px;color:#e6f3ff}
+.faq p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}
+.site-foot{margin-top:18px;text-align:center;color:var(--muted);font-size:12.5px;line-height:1.8}
+.site-foot .controls-hint{display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:center;margin:0 0 8px;color:#cfe0f2;font-size:12.5px}
+kbd{display:inline-block;min-width:22px;padding:3px 7px;border-radius:5px;border:1px solid rgba(148,180,220,.3);background:rgba(255,255,255,.05);color:#d6e6f8;font-family:var(--mono);font-size:11px;box-shadow:0 1px 0 rgba(0,0,0,.35)}
+.site-foot a{color:var(--cyan);text-decoration:none}
+@media (max-width:560px){ .hud .stat b{font-size:1.2rem} .btn{padding:10px 14px;font-size:13px} }
+@media (prefers-reduced-motion: reduce){ .toast{transition:none} }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#game">跳到游戏画面</a>
+<noscript>
+  <p class="noscript-note">
+    本游戏需要启用 JavaScript 才能运行。请开启浏览器的 JavaScript 后刷新页面，即可离线游玩 Water Sort 水管排序。
+  </p>
+</noscript>
+<div class="shell">
+  <nav class="crumb" aria-label="面包屑导航">
+    <a href="https://vip-4.github.io/open-casino/">Open Casino</a>
+    <span aria-hidden="true">›</span>
+    <span aria-current="page">Water Sort 水管排序</span>
+  </nav>
+  <header class="topbar">
+    <div class="brand"><span class="mark">💧</span><span>Water Sort<small>霓虹水管排序 · Open Casino</small></span></div>
+  </header>
+
+  <main class="cabinet" id="game">
+    <div class="screen">
+      <canvas id="canvas" width="960" height="600" tabindex="0"
+        aria-label="水管排序游戏画面。使用方向键或 A、D 聚焦管子，空格或回车选中并倒入；也可用鼠标或手指点击管子。">
+        你的浏览器不支持 Canvas，请使用较新的浏览器打开本页面。
+      </canvas>
+      <div class="scanlines" aria-hidden="true"></div>
+      <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+      <div class="overlay" id="overlay">
+        <section class="panel" id="panelStart" aria-labelledby="startTitle">
+          <p class="eyebrow">READY PLAYER ONE</p>
+          <h2 id="startTitle">霓虹开局 · 给液体分类</h2>
+          <p class="lead">点击或拖动管子，把同色液体倒在一起，让每根管子最终只含一种颜色即可通关。支持键盘、鼠标与触屏。</p>
+          <div class="hud" style="justify-content:center">
+            <button type="button" class="btn primary" id="startBtn">开始游戏</button>
+          </div>
+        </section>
+        <section class="panel" id="panelWin" aria-labelledby="winTitle" hidden>
+          <p class="eyebrow">LEVEL CLEAR</p>
+          <h2 id="winTitle">本关完成 ✦</h2>
+          <p class="lead" id="winText">所有管子已单色分类。准备好进入下一关了吗？</p>
+          <div class="hud" style="justify-content:center">
+            <button type="button" class="btn primary" id="nextBtn">下一关 →</button>
+            <button type="button" class="btn ghost" id="replayBtn">重玩本关</button>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="hud" role="group" aria-label="游戏状态与控制">
+      <div class="stat"><b id="lvl">1</b><span>关卡 LEVEL</span></div>
+      <div class="stat"><b id="moves">0</b><span>步数 MOVES</span></div>
+      <div class="stat"><b id="score">0</b><span>得分 SCORE</span></div>
+      <div class="spacer"></div>
+      <button type="button" class="btn ghost" id="undoBtn" aria-label="撤销上一步">↶ 撤销</button>
+      <button type="button" class="btn ghost" id="restartBtn" aria-label="重开本关">↺ 重开</button>
+      <button type="button" class="btn ghost" id="muteBtn" aria-pressed="false" aria-label="开关音效">🔊 音效</button>
+    </div>
+    <p id="status" class="sr-status" role="status" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"></p>
+  </main>
+
+  <section class="info" aria-labelledby="guideTitle">
+    <p class="info-lead">Water Sort 水管排序是一款可离线运行的单文件 HTML5 Canvas 解谜游戏。它把经典「水管排序」规则与霓虹视觉结合：点击或拖动管子，把相连的同色液体倒在一起，让每根管子最终只含一种颜色即通关。全程无需联网、无需注册、无任何外部依赖，适合在任何现代浏览器即开即玩，也便于搜索引擎与生成式引擎抓取与引用。</p>
+    <h2 id="guideTitle">玩法与计分规则</h2>
+    <div class="cards">
+      <article><h3>选择来源</h3><p>点击、轻触或用键盘方向键聚焦一根装有液体的管子，作为倒出的来源。</p></article>
+      <article><h3>倒入条件</h3><p>目标管必须为空，或其顶部颜色与来源顶部相同；只会倒入相连的同色液体段。</p></article>
+      <article><h3>通关条件</h3><p>每根管子要么为空，要么被同一种颜色的液体填满，即视为该关通过。</p></article>
+      <article><h3>进阶难度</h3><p>每过一关颜色数量增加、管子增多，最少 3 色、最多 12 色，循序渐进。</p></article>
+    </div>
+    <div class="faq">
+      <article><h3>Water Sort 水管排序怎么玩？</h3><p>点击一根装有液体的管子选中它，再点击另一根管子即可把顶部相连的同色液体倒过去。目标是让每根管子最终只含一种颜色（或为空）。</p></article>
+      <article><h3>这款游戏需要联网吗？</h3><p>不需要。页面不加载任何外部库、字体或图片，游戏逻辑与音效全部由原生 JavaScript 与 Web Audio 在本地生成，可离线运行。</p></article>
+      <article><h3>每一关都保证可解吗？</h3><p>是的。关卡由「先按颜色填满、再打乱所有液体段」的标准生成方式产生，因此每一关都有解；难度通过增加颜色数量循序渐进。</p></article>
+    </div>
+  </section>
+
+  <footer class="site-foot">
+    <p class="controls-hint">
+      <span><kbd>←</kbd><kbd>→</kbd> / <kbd>A</kbd><kbd>D</kbd> 聚焦管子</span>
+      <span><kbd>空格</kbd> / <kbd>回车</kbd> 选中并倒入</span>
+      <span>鼠标 / 触屏点击</span>
+    </p>
+    <p>虚拟积分，无货币价值 · 纯前端技术演示 · <a href="https://vip-4.github.io/open-casino/" style="color:var(--cyan);text-decoration:none">返回 Open Casino 首页</a></p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
+  var overlay = document.getElementById("overlay");
+  var panelStart = document.getElementById("panelStart");
+  var panelWin = document.getElementById("panelWin");
+  var toastEl = document.getElementById("toast");
+  var statusEl = document.getElementById("status");
+  var lvlEl = document.getElementById("lvl");
+  var movesEl = document.getElementById("moves");
+  var scoreEl = document.getElementById("score");
+
+  var CAP = 4;                 // segments per tube
+  var MAX_COLORS = 12;
+  var EMPTY_TUBES = 2;
+  var COLORS = [
+    "#ff3b6b","#ff9f1c","#ffe14d","#6dff5b","#22e6ff","#4d7cff",
+    "#9d8cff","#ff2e88","#2ee6c0","#2bd66b","#ff7bd5","#ffb02e"
+  ];
+  var reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var dpr = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
+
+  var tubes = [];              // array of arrays (bottom->top color indices)
+  var level = 1;
+  var moves = 0;
+  var score = 0;
+  var selected = -1;
+  var focusIdx = 0;
+  var history = [];
+  var state = "start";         // start | play | won
+  var muted = false;
+  var anim = null;             // {from,to,color,count,t0,dur}
+  var geo = null;              // computed tube geometry
+
+  // ---------- audio (synth, optional) ----------
+  var actx = null;
+  function audio(){ if(!actx){ try{ actx = new (window.AudioContext||window.webkitAudioContext)(); }catch(e){ actx=null; } } return actx; }
+  function beep(freq, dur, type){
+    if(muted) return;
+    var a = audio(); if(!a) return;
+    if(a.state === "suspended"){ try{ a.resume(); }catch(e){} }
+    try{
+      var o = a.createOscillator(), g = a.createGain();
+      o.type = type||"sine"; o.frequency.value = freq;
+      g.gain.setValueAtTime(0.0001, a.currentTime);
+      g.gain.exponentialRampToValueAtTime(0.16, a.currentTime+0.01);
+      g.gain.exponentialRampToValueAtTime(0.0001, a.currentTime+(dur||0.12));
+      o.connect(g); g.connect(a.destination);
+      o.start(); o.stop(a.currentTime+(dur||0.12));
+    }catch(e){}
+  }
+
+  // ---------- level generation (always solvable) ----------
+  function shuffle(a){
+    for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; }
+    return a;
+  }
+  function genLevel(n){
+    var colors = Math.min(MAX_COLORS, Math.max(3, n+2));
+    var total = colors * CAP;
+    var pool = [];
+    for(var c=0;c<colors;c++){ for(var k=0;k<CAP;k++){ pool.push(c); } }
+    var safe=0;
+    var t;
+    do{
+      shuffle(pool);
+      t = [];
+      var idx=0;
+      for(var i=0;i<colors;i++){ t.push(pool.slice(idx, idx+CAP)); idx+=CAP; }
+      for(var e=0;e<EMPTY_TUBES;e++){ t.push([]); }
+      safe++;
+    } while(isSolved(t) && safe<20);
+    return t;
+  }
+  function isSolved(t){
+    for(var i=0;i<t.length;i++){
+      if(t[i].length===0) continue;
+      if(t[i].length!==CAP) return false;
+      var c=t[i][0];
+      for(var k=1;k<t[i].length;k++){ if(t[i][k]!==c) return false; }
+    }
+    return true;
+  }
+
+  // ---------- game actions ----------
+  function snapshot(){ return tubes.map(function(t){ return t.slice(); }); }
+  function restore(s){ tubes = s.map(function(t){ return t.slice(); }); }
+
+  function topRun(tube){
+    if(tube.length===0) return 0;
+    var c=tube[tube.length-1], n=1;
+    for(var i=tube.length-2;i>=0;i--){ if(tube[i]===c) n++; else break; }
+    return n;
+  }
+
+  function tryPour(from, to){
+    if(from===to) return false;
+    if(from<0||to<0||from>=tubes.length||to>=tubes.length) return false;
+    var src=tubes[from], dst=tubes[to];
+    if(src.length===0) return false;
+    var color=src[src.length-1];
+    if(dst.length===CAP) return false;
+    if(dst.length>0 && dst[dst.length-1]!==color) return false;
+    var movable = topRun(src);
+    var space = CAP - dst.length;
+    var move = Math.min(movable, space);
+    if(move<=0) return false;
+    history.push(snapshot());
+    for(var i=0;i<move;i++){ dst.push(src.pop()); }
+    moves++;
+    if(!reduced){ anim = { from:from, to:to, color:color, count:move, t0:performance.now(), dur:220 }; }
+    beep(360 + color*40, 0.10, "triangle");
+    afterMove();
+    return true;
+  }
+
+  function afterMove(){
+    updateHud();
+    if(isSolved(tubes)){
+      state="won";
+      var gained = Math.max(20, 100*level - moves*3);
+      score += gained;
+      updateHud();
+      beep(660,0.18,"sine"); setTimeout(function(){ beep(880,0.22,"sine"); }, 120);
+      document.getElementById("winText").textContent =
+        "本关用 " + moves + " 步完成，得分 +" + gained + "。准备好进入下一关了吗？";
+      show(panelWin);
+      announce("本关完成，得分加 " + gained + "。点击下一关继续。");
+    } else {
+      announce("已倒 " + moves + " 步。");
+    }
+  }
+
+  function newLevel(n){
+    level=n; moves=0; selected=-1; history=[]; anim=null; state="play";
+    tubes = genLevel(n);
+    hide(panelWin); hide(panelStart);
+    overlay.hidden = true;
+    updateHud();
+    announce("第 " + n + " 关开始，共 " + tubes.length + " 根管子。");
+  }
+
+  function updateHud(){
+    lvlEl.textContent = level;
+    movesEl.textContent = moves;
+    scoreEl.textContent = score;
+  }
+  function show(panel){ overlay.hidden=false; panel.hidden=false; var other = panel===panelWin?panelStart:panelWin; other.hidden=true; }
+  function hide(panel){ panel.hidden=true; }
+
+  var toastTimer=null;
+  function toast(msg){
+    toastEl.textContent=msg; toastEl.classList.add("show");
+    if(toastTimer) clearTimeout(toastTimer);
+    toastTimer=setTimeout(function(){ toastEl.classList.remove("show"); }, 1100);
+  }
+  function announce(msg){ statusEl.textContent=msg; }
+
+  // ---------- input ----------
+  function tubeAt(px, py){
+    if(!geo) return -1;
+    for(var i=0;i<geo.length;i++){
+      var g=geo[i];
+      if(px>=g.x-10 && px<=g.x+g.w+10 && py>=g.y-10 && py<=g.y+g.h+10) return i;
+    }
+    return -1;
+  }
+  function activate(idx){
+    if(idx<0||idx>=tubes.length) return;
+    if(state!=="play") return;
+    if(selected===-1){
+      if(tubes[idx].length===0){ toast("这根管子是空的"); return; }
+      selected=idx; focusIdx=idx; toast("已选择管子 " + (idx+1)); announce("已选择第 " + (idx+1) + " 根管子，请选择目标。");
+    } else if(selected===idx){
+      selected=-1; toast("已取消选择"); announce("已取消选择。");
+    } else {
+      var ok = tryPour(selected, idx);
+      if(!ok){ toast("不能倒到这里"); }
+      selected=-1;
+    }
+    draw();
+  }
+
+  canvas.addEventListener("pointerdown", function(ev){
+    if(state!=="play") return;
+    var r=canvas.getBoundingClientRect();
+    var px=(ev.clientX-r.left), py=(ev.clientY-r.top);
+    var idx=tubeAt(px,py);
+    if(idx>=0) activate(idx);
+  });
+
+  document.addEventListener("keydown", function(ev){
+    if(state!=="play") return;
+    var k=ev.key;
+    if(k==="ArrowLeft"||k==="a"||k==="A"){ focusIdx=(focusIdx-1+tubes.length)%tubes.length; draw(); ev.preventDefault(); }
+    else if(k==="ArrowRight"||k==="d"||k==="D"){ focusIdx=(focusIdx+1)%tubes.length; draw(); ev.preventDefault(); }
+    else if(k===" "||k==="Enter"){ activate(focusIdx); ev.preventDefault(); }
+    else if(k>="1"&&k<="9"){ var n=parseInt(k,10)-1; if(n<tubes.length){ focusIdx=n; activate(n); ev.preventDefault(); } }
+  });
+
+  document.getElementById("startBtn").addEventListener("click", function(){ if(actx) {} audio(); newLevel(1); });
+  document.getElementById("nextBtn").addEventListener("click", function(){ newLevel(level+1); });
+  document.getElementById("replayBtn").addEventListener("click", function(){ newLevel(level); });
+  document.getElementById("undoBtn").addEventListener("click", function(){
+    if(state!=="play") return;
+    if(history.length===0){ toast("没有可撤销的步骤"); return; }
+    restore(history.pop());
+    moves=Math.max(0,moves-1); selected=-1; updateHud(); toast("已撤销"); announce("已撤销一步。"); draw();
+  });
+  document.getElementById("restartBtn").addEventListener("click", function(){ if(state==="play"||state==="won"){ newLevel(level); } });
+  document.getElementById("muteBtn").addEventListener("click", function(){
+    muted=!muted; var b=document.getElementById("muteBtn");
+    b.textContent = muted ? "🔇 静音" : "🔊 音效"; b.setAttribute("aria-pressed", muted?"true":"false");
+    if(!muted) beep(520,0.08,"square");
+  });
+
+  // ---------- layout & rendering ----------
+  function layout(){
+    var W=canvas.clientWidth||960, H=canvas.clientHeight||600;
+    canvas.width=Math.round(W*dpr); canvas.height=Math.round(H*dpr);
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    var n=tubes.length;
+    var cols=Math.min(n, 7);
+    var rows=Math.ceil(n/cols);
+    var padX=W*0.06, padTop=H*0.10, padBottom=H*0.10;
+    var availW=W-padX*2, availH=H-padTop-padBottom;
+    var gapX=availW*0.04, gapY=availH*0.06;
+    var tw=(availW-gapX*(cols-1))/cols;
+    var th=(availH-gapY*(rows-1))/rows;
+    th=Math.min(th, tw*2.4);
+    geo=[];
+    for(var i=0;i<n;i++){
+      var c=i%cols, r=Math.floor(i/cols);
+      var x=padX + c*(tw+gapX);
+      var y=padTop + r*(th+gapY);
+      geo.push({x:x, y:y, w:tw, h:th, r:Math.min(tw*0.22, 16)});
+    }
+  }
+
+  function roundRect(x,y,w,h,r){
+    ctx.beginPath();
+    ctx.moveTo(x+r,y);
+    ctx.arcTo(x+w,y,x+w,y+h,r);
+    ctx.arcTo(x+w,y+h,x,y+h,r);
+    ctx.arcTo(x,y+h,x,y,r);
+    ctx.arcTo(x,y,x+w,y,r);
+    ctx.closePath();
+  }
+
+  function drawTube(g, tube, isSel, isFocus){
+    var x=g.x,y=g.y,w=g.w,h=g.h,r=g.r;
+    // glass body
+    ctx.save();
+    roundRect(x,y,w,h,r);
+    ctx.fillStyle="rgba(10,16,32,0.72)";
+    ctx.fill();
+    ctx.lineWidth=2;
+    ctx.strokeStyle = isSel ? "rgba(157,255,91,0.95)" : (isFocus ? "rgba(34,230,255,0.8)" : "rgba(120,150,200,0.35)");
+    ctx.stroke();
+    ctx.clip();
+    // liquid
+    var seg=h/CAP;
+    for(var i=0;i<tube.length;i++){
+      var col=COLORS[tube[i]];
+      var sy=y+h-(i+1)*seg;
+      var grad=ctx.createLinearGradient(0,sy,0,sy+seg);
+      grad.addColorStop(0, col);
+      grad.addColorStop(1, shade(col,-18));
+      ctx.fillStyle=grad;
+      ctx.fillRect(x, sy, w, seg+1);
+      ctx.fillStyle="rgba(255,255,255,0.10)";
+      ctx.fillRect(x, sy, w, Math.min(4,seg*0.4));
+    }
+    // top highlight
+    ctx.fillStyle="rgba(255,255,255,0.06)";
+    ctx.fillRect(x, y, w, h*0.10);
+    ctx.restore();
+    // selection ring glow
+    if(isSel){
+      ctx.save();
+      roundRect(x-3,y-3,w+6,h+6,r+3);
+      ctx.lineWidth=3; ctx.strokeStyle="rgba(157,255,91,0.9)";
+      ctx.shadowColor="rgba(157,255,91,0.7)"; ctx.shadowBlur=16; ctx.stroke();
+      ctx.restore();
+    }
+    if(isFocus && !isSel){
+      ctx.save();
+      roundRect(x-2,y-2,w+4,h+4,r+2);
+      ctx.lineWidth=2; ctx.strokeStyle="rgba(34,230,255,0.7)"; ctx.stroke();
+      ctx.restore();
+    }
+  }
+
+  function shade(hex, amt){
+    var c=hex.replace("#",""); var n=parseInt(c,16);
+    var r=(n>>16)+amt, g=((n>>8)&255)+amt, b=(n&255)+amt;
+    r=Math.max(0,Math.min(255,r)); g=Math.max(0,Math.min(255,g)); b=Math.max(0,Math.min(255,b));
+    return "rgb("+r+","+g+","+b+")";
+  }
+
+  function drawStream(){
+    if(!anim) return;
+    var p=Math.min(1,(performance.now()-anim.t0)/anim.dur);
+    if(p>=1){ anim=null; return; }
+    var gf=geo[anim.from], gt=geo[anim.to];
+    var x1=gf.x+gf.w/2, y1=gf.y;
+    var x2=gt.x+gt.w/2, y2=gt.y+gt.h;
+    ctx.save();
+    ctx.strokeStyle=COLORS[anim.color];
+    ctx.lineWidth=Math.max(6, gt.w*0.22);
+    ctx.lineCap="round";
+    ctx.shadowColor=COLORS[anim.color]; ctx.shadowBlur=12;
+    ctx.beginPath();
+    ctx.moveTo(x1,y1);
+    ctx.lineTo(x1, y1 - 18 - p*10);
+    ctx.lineTo(x2, y2 + 8);
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  function draw(){
+    var W=canvas.clientWidth||960, H=canvas.clientHeight||600;
+    ctx.clearRect(0,0,W,H);
+    // subtle frame
+    ctx.strokeStyle="rgba(157,140,255,0.12)";
+    ctx.lineWidth=1;
+    ctx.strokeRect(8,8,W-16,H-16);
+    if(!geo || geo.length!==tubes.length) layout();
+    for(var i=0;i<tubes.length;i++){
+      drawTube(geo[i], tubes[i], i===selected, i===focusIdx);
+      // index label
+      ctx.fillStyle="rgba(200,220,245,0.55)";
+      ctx.font="600 12px "+getFont();
+      ctx.textAlign="center";
+      ctx.fillText(String(i+1), geo[i].x+geo[i].w/2, geo[i].y-8);
+    }
+    drawStream();
+  }
+  function getFont(){ return '"Segoe UI","PingFang SC","Microsoft YaHei",system-ui,sans-serif'; }
+
+  function loop(){ draw(); requestAnimationFrame(loop); }
+
+  window.addEventListener("resize", function(){ layout(); draw(); });
+
+  // boot: build level 1 in background so canvas has content behind the start overlay
+  tubes = genLevel(1);
+  layout();
+  updateHud();
+  loop();
+
+  // expose debug handle (not required)
+  window.WaterSort = { get state(){return state;}, get level(){return level;}, get tubes(){return tubes;}, newLevel:newLevel };
+})();
+</script>
+</body>
+</html>

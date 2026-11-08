@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://vip-4.github.io/open-casino/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://vip-4.github.io/open-casino/assets/og-image.png</image:loc>
+      <image:title>Open Casino 开源小赌场</image:title>
+      <image:caption>老虎机、猜大小、抛硬币与赛博老虎机打砖块四款免费开源网页小游戏</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vip-4.github.io/open-casino/games/cyber-slots-breaker.html</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vip-4.github.io/open-casino/assets/og-image.png</image:loc>
+      <image:title>Cyber Slots Breaker 赛博老虎机打砖块</image:title>
+      <image:caption>零依赖单文件 HTML5 Canvas 打砖块街机游戏，含老虎机符号槽与 JACKPOT</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vip-4.github.io/open-casino/games/water-sort.html</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vip-4.github.io/open-casino/assets/og-image.png</image:loc>
+      <image:title>Water Sort 水管排序</image:title>
+      <image:caption>零依赖单文件 HTML5 Canvas 色彩分类解谜游戏，点击或拖动管子把同色液体倒在一起</image:caption>
+    </image:image>
+  </url>
+</urlset>

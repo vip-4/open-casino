@@ -1,0 +1,26 @@
+﻿# Open Casino — robots.txt
+# 纯静态站点，无任何动态参数或私有接口
+
+User-agent: *
+Allow: /
+Disallow: /configure.py
+Disallow: /README.md
+
+# 生成式引擎 / AI 爬虫：显式放行可引用正文。
+# 多个连续 User-agent 行共用一个规则组，规则与 * 组保持一致。
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+User-agent: PerplexityBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+Allow: /
+Disallow: /configure.py
+Disallow: /README.md
+
+# 抓取与生成式引擎发现入口
+Sitemap: https://vip-4.github.io/open-casino/sitemap.xml
+# LLM 友好摘要：https://vip-4.github.io/open-casino/llms.txt

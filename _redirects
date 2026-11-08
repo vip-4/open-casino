@@ -1,0 +1,3 @@
+# Netlify 重定向：为常见入口提供稳定别名
+/home    /            301
+/play    /#games      301
